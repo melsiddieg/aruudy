@@ -163,7 +163,8 @@ class Part(TafiilaComp):
             the text following the meter.
 
         """
-        l = len(self.emeter)
+        # number of prosody units equals length of Arabic meter (ameter), not English
+        l = len(self.ameter)
         if not units or len(units) < l:
             return None
         self.text = "".join(units[:l])
