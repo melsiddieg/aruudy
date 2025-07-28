@@ -193,6 +193,8 @@ class Part(TafiilaComp):
             "type": self.type,
             "emeter": self.emeter,
             "ameter": self.ameter,
+            # binary representation of the Arabic meter: w->1, s->0
+            "binary": "".join("1" if c == 'w' else "0" for c in self.ameter),
             "mnemonic": self.mnemonic,
             "text": self.text
         }
