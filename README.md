@@ -64,6 +64,12 @@ In english scansion, we use two characters:
 pip install aruudy
 ```
 
+If you want to install the very latest version (including recent fixes) directly from this GitHub repository, use:
+
+```bash
+pip install --upgrade git+https://github.com/melsiddieg/aruudy.git
+```
+
 ### Command line
 
 #### List all available meters
