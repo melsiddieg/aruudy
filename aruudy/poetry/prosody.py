@@ -191,7 +191,8 @@ def _prosody_add(text):
 
 def _prosody_change(text):
     res = text
-    res = re.sub(u"([^\s]+)", lambda m: change.modify(m.group(1)), res)
+    # wrap non-space segments to apply change.modify for each token
+    res = re.sub(r"([^\s]+)", lambda m: change.modify(m.group(1)), res)
     return res
 
 #TODO trait these
